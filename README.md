@@ -20,7 +20,7 @@ We'll need a way to invoke our newly minted app and show the welcome message, as
 #!/usr/bin/env node
 require('../')()
 ```
-Next, we'll add our binary to the package.json file. This will automatically place it onto the user's system path when they install our package as a global (npm install -g outside-cli).
+Next, we'll add our binary to the package.json file. This will automatically place it onto the user's system path when they install our package as a global (npm install -g currency-cli).
 
 ```
 npm install -g currency-cli
@@ -30,3 +30,5 @@ npm install -g currency-cli
 package.json
 
 ![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/1.PNG)
+
+We can now call our bin file directly by running ./bin/currency. You should see the welcome message. Running npm link in the root of your project will symlink your binary file to the system path, making it accessible from anywhere by running outside.
