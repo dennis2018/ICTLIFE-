@@ -13,3 +13,10 @@ package.json
 index.js
 
 ![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%232.PNG)
+
+## Creating A Bin File
+We'll need a way to invoke our newly minted app and show the welcome message, as well as add it to the system path so it can be called from anywhere. A bin file is the way to do that.
+```
+#!/usr/bin/env node
+require('../')()
+```
