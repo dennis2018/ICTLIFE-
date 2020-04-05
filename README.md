@@ -32,3 +32,5 @@ package.json
 ![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/1.PNG)
 
 We can now call our bin file directly by running ./bin/currency. You should see the welcome message. Running npm link in the root of your project will symlink your binary file to the system path, making it accessible from anywhere by running outside.
+
+## Parsing Commands And Arguments
