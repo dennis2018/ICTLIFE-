@@ -26,3 +26,7 @@ Next, we'll add our binary to the package.json file. This will automatically pla
 npm install -g currency-cli
 ```
 ![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%233.PNG)
+
+package.json
+
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/1.PNG)
