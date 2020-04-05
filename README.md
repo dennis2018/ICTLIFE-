@@ -6,3 +6,4 @@ mkdir ictlife
 cd ictlife
 npm init
 ```
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/1.PNG)
