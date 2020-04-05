@@ -6,6 +6,8 @@ mkdir ictlife
 cd ictlife
 npm init
 ```
+package.json
 ![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/1.PNG)
 
 index.js
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%232.PNG)
