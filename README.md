@@ -63,3 +63,17 @@ Now if you run currency today, you'll see the message "Stock Exchange for USD", 
 There are a few commands and arguments that are expected to be in every CLI: help, --help and -h, which should obviously show help menus, and version, --version and -v which should output the current app version. We should also default to a main help menu if no command is specified.
 
 This can be easily implemented in our current setup by adding two cases to our switch statement, a default value for the cmd variable, and implementing some if statements for the help and version argument flags. Minimist automatically parses arguments to key/values, so running currency --version will make args.version equal true.
+
+index.js
+
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%236.PNG)
+
+version.js
+
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%237.PNG)
+
+help.js
+
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%238.PNG)
+
+Now if you run currency help stock or currency stock -h, you should see the help menu for the today command. Running outside or outside -h should show you the main help menu.
