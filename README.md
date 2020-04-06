@@ -39,3 +39,7 @@ When you run a CLI app, it consists of arguments and commands. Arguments (or "fl
 
 
 In order for our app to be useful at all, we'll need to parse those commands ands arguments, and turn them into an object. We could always jump into ```process.argv``` and try to do it ourselves, but let's install our first dependency called ```minimist``` to take care of this one for us.
+
+```
+$ npm install --save minimist
+```
