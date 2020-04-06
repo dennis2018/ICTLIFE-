@@ -97,3 +97,7 @@ help.js
 Sometimes a command can take a long time to run. If you're fetching data from an API, generating content, writing files to the disk or any other process that takes more than a few milliseconds, you want to give the user some feedback that your app hasn't frozen and is simply working hard. Sometimes you can measure the progress of your operation and it makes sense to show a progress bar, but other times it's more variable and makes sense to show a loading indicator instead.
 
 For our app, we can't measure the progress of our API requests so we'll use a basic spinner to show something is happening. Install two more dependencies for our network requests and our spinner:
+
+```
+ npm install --save axios ora
+  ```
