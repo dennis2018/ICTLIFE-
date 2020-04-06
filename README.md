@@ -44,3 +44,5 @@ In order for our app to be useful at all, we'll need to parse those commands and
 $ npm install --save minimist
 ```
 ![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%234.PNG)
+
+The reason we remove the first two arguments with .slice(2) is because the first arg will always be the interpreter followed by the name of the file being interpreted. We only care about the arguments after that.
