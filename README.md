@@ -43,4 +43,4 @@ In order for our app to be useful at all, we'll need to parse those commands and
 ```
 $ npm install --save minimist
 ```
-![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/1.PNG)
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%234.PNG)
