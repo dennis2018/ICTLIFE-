@@ -36,3 +36,6 @@ We can now call our bin file directly by running ./bin/currency. You should see 
 ## Parsing Commands And Arguments
 
 When you run a CLI app, it consists of arguments and commands. Arguments (or "flags") are the values prepended with one or two hyphens (such as -d, --debug or --env production) and are useful for passing options to our app. Commands are all the other values that don't have a flag. Unlike commands, arguments don't need to be specified in any particular order. For example, we could run ```currency stock today ``` and just assume that the second command will always be the Stock--but wouldn't it be better to run ```currency today --Stock Currency ```in case we want to add more options in the future?
+
+
+In order for our app to be useful at all, we'll need to parse those commands ands arguments, and turn them into an object. We could always jump into ```process.argv``` and try to do it ourselves, but let's install our first dependency called ```minimist``` to take care of this one for us.
