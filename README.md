@@ -101,3 +101,26 @@ For our app, we can't measure the progress of our API requests so we'll use a ba
 ```
  npm install --save axios ora
   ```
+## Loading Indicators
+Sometimes a command can take a long time to run. If you're fetching data from an API, generating content, writing files to the disk or any other process that takes more than a few milliseconds, you want to give the user some feedback that your app hasn't frozen and is simply working hard. Sometimes you can measure the progress of your operation and it makes sense to show a progress bar, but other times it's more variable and makes sense to show a loading indicator instead.
+
+For our app, we can't measure the progress of our API requests so we'll use a basic spinner to show something is happening. Install two more dependencies for our network requests and our spinner:
+
+```
+ npm install --save axios ora
+  ```
+
+exchange.js
+
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%2313.PNG)
+
+stock.js
+
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%2312.PNG)
+
+
+Now let's create a utility that will make a request to the Google stock exchange API for the current rates
+
+Now if you run outside today --location "Brooklyn, NY", you'll see a quick spinner while it makes the request, followed by the current weather conditions.
+
+Since the request happens so fast, it can be difficult to see the loading indicator. If you want to manually slow it down for the purpose of seeing it, you can add this line to the beginning of your weather util function: await new Promise(resolve => setTimeout(resolve, 5000)).
