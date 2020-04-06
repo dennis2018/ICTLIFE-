@@ -58,3 +58,8 @@ It's important to remember that values must be quoted if they contain special ch
 It's a good idea to split up the code for each command and only load it into memory when it is called. This creates faster startup times and prevents unnecessary modules from loading. Easy enough with a switch statement on the main command given to us by minimist. Using this setup, each command file should export a function, and in this case, we're passing the arguments to each command so we can use them later.
 
 Now if you run currency today, you'll see the message "Stock Exchange for USD", and if you run outside stock, it will tell you that "stock" is not a valid command. Obviously we still need to query a stock exchange API to get real data, but this is a good start.
+
+## Expected Commands
+There are a few commands and arguments that are expected to be in every CLI: help, --help and -h, which should obviously show help menus, and version, --version and -v which should output the current app version. We should also default to a main help menu if no command is specified.
+
+This can be easily implemented in our current setup by adding two cases to our switch statement, a default value for the cmd variable, and implementing some if statements for the help and version argument flags. Minimist automatically parses arguments to key/values, so running currency --version will make args.version equal true.
