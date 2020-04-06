@@ -34,3 +34,5 @@ package.json
 We can now call our bin file directly by running ./bin/currency. You should see the welcome message. Running npm link in the root of your project will symlink your binary file to the system path, making it accessible from anywhere by running outside.
 
 ## Parsing Commands And Arguments
+
+When you run a CLI app, it consists of arguments and commands. Arguments (or "flags") are the values prepended with one or two hyphens (such as -d, --debug or --env production) and are useful for passing options to our app. Commands are all the other values that don't have a flag. Unlike commands, arguments don't need to be specified in any particular order. For example, we could run ```currency stock today ``` and just assume that the second command will always be the Stock--but wouldn't it be better to run ```currency today --Stock Currency ```in case we want to add more options in the future?
