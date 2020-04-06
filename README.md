@@ -77,3 +77,23 @@ help.js
 ![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%238.PNG)
 
 Now if you run currency help stock or currency stock -h, you should see the help menu for the today command. Running outside or outside -h should show you the main help menu.
+
+## Adding Another Command
+This project setup is really awesome because if you need to add a new command, all you need to do is create a new file in the cmds folder, add it to the switch statement and add a help menu if it has one.
+
+africa.js
+
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%239.PNG)
+
+index.js
+
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%2310.PNG)
+
+help.js
+
+![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%2311.PNG)
+
+## Loading Indicators
+Sometimes a command can take a long time to run. If you're fetching data from an API, generating content, writing files to the disk or any other process that takes more than a few milliseconds, you want to give the user some feedback that your app hasn't frozen and is simply working hard. Sometimes you can measure the progress of your operation and it makes sense to show a progress bar, but other times it's more variable and makes sense to show a loading indicator instead.
+
+For our app, we can't measure the progress of our API requests so we'll use a basic spinner to show something is happening. Install two more dependencies for our network requests and our spinner:
