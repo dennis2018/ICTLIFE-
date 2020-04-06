@@ -46,3 +46,13 @@ $ npm install --save minimist
 ![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%234.PNG)
 
 The reason we remove the first two arguments with .slice(2) is because the first arg will always be the interpreter followed by the name of the file being interpreted. We only care about the arguments after that.
+
+Now running outside today should output { _: ['Stock'] }. If you run outside today --Stock "Brooklyn, NY", it should output { _: ['today'], location: 'Brooklyn, NY' }. We'll go more in-depth with arguments later when we actually use the location, but for now this is enough to set up our first command.
+
+## Argument Syntax
+To better understand how argument syntax works, you can read this. Basically, a flag can be single or double hyphened, and will take the value immediately following in the command or equal true when there is no value. Single-hyphen flags can also be combined for short-handed booleans (-a -b -c or -abc would give you { a: true, b: true, c: true }.)
+
+It's important to remember that values must be quoted if they contain special characters or a space. Running --foo bar baz would give you `{ : ['baz'], foo: 'bar' }, but running--foo "bar baz"would give you{ foo: 'bar baz' }`._
+
+## Running Commands
+It's a good idea to split up the code for each command and only load it into memory when it is called. This creates faster startup times and prevents unnecessary modules from loading. Easy enough with a switch statement on the main command given to us by minimist. Using this setup, each command file should export a function, and in this case, we're passing the arguments to each command so we can use them later.
