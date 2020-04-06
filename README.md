@@ -118,7 +118,7 @@ Now if you run outside today --location "Brooklyn, NY", you'll see a quick spinn
 Since the request happens so fast, it can be difficult to see the loading indicator. If you want to manually slow it down for the purpose of seeing it, you can add this line to the beginning of your weather util function: await new Promise(resolve => setTimeout(resolve, 5000)).
 
 
-Now let's copy that code over to our forecast command, and change the formatting a bit.
+Now let's copy that code over to our africa command, and change the formatting a bit.
 
 ![alt text](https://github.com/dennis2018/ICTLIFE-/blob/master/%2314.PNG)
 
